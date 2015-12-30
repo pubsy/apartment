@@ -20,7 +20,8 @@ public class Application extends Controller {
     	simpleEmail.setFrom(email);
     	simpleEmail.addTo("vitalii.kravets@gmail.com");
     	simpleEmail.setSubject("Огляд квартири");
-    	simpleEmail.setMsg(name + "\n" + phone + "\n" + message);
+    	simpleEmail.setMsg(name + "\n" + phone + "\n" + email + "\n" + message);
+    	simpleEmail.setCharset("UTF-8");
     	
     	Mail.send(simpleEmail);
     }
